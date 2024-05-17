@@ -38,7 +38,8 @@ stock_price[2] <- stock price on day 3
 stock_price = {
     'march 4': 298, 
     'march 5': 305,
-    'march 6': 320,
+    'ls
+    smarch 6': 320,
     'march 7': 301,
     }
 ```
@@ -77,4 +78,28 @@ stock_price = {
 | Array           | List          | Native array / Array list| Native array /std::vector|
 | Hash Table      | dictionary    | HashMap / LinkedHashMap  | std::map |
 | Linked List     | Not available | LinkedList               | std::list  |
+
+## Big O notation:
+* Big O notation is used to measure how running time or space requirements for your program grows as input size grows.
+
+## Runtime Analysis
+* for example, let's assume below array function:
+```
+def foo(arr):
+
+size(arr) --> 100 --> 0.22 milliseconds
+size(arr) --> 1000 --> 2.30 milliseconds
+
+time = a*n + b
+
+--Is a linear progression
+```
+
+* simplified:
+`time = a*n + b` 
+* time = a*n  : keep faster growing term
+* time = O(n) : drop constants 
+
+>> Now we say that the Big O notation time complexity for this program is order of n --> O(n)
+ 
 
