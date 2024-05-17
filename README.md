@@ -71,4 +71,8 @@ stock_price = {
     }
 ```
 
+## Different Data Structures & Programming Languages  
+| Data Structure  | Python | Java                    | C++ |
+| ---             | ---    | ---                     | ---
+| Array           | List   |Native array / Array list| Native array /std::vector |
 
