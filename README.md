@@ -48,7 +48,7 @@ stock_price = {
 stock_price[march 7] <- march 7 stock price
 stock_price[march 4] <- march 4 stock price 
 
-## You can see that in this two scenarios, I used two different data structures which are LIST and DICTIONARY, which have a hashmap behind the scene
+`You can see that in this two scenarios, I used two different data structures which are LIST and DICTIONARY, which have a hashmap behind the scene`
 
 * we used this two different data structure to solve two different problems - so it depends on what kind of problem that you are solving - will determine what kind of data structure that will be best suited for the particular problem. 
 
