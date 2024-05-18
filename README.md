@@ -111,11 +111,30 @@ time = a*n + b
 
 `time = O(1)`
 
-# O(n^2) Time Complexity 
+## O(n^2) Time Complexity 
 - A classic exmple is where we trying to find a duplicate number in a list 
 
 * time = a * n^2 + b
 
 `time = O(n^2)`
+
+* Another O(n^2) scenario is
+`time = a*n^2 + b*n + c`
+
+- For this two scenarios, always remember, 
+1) keep the fastest growing term
+2) Drop contants 
+
+- **Big O** refers to large value of `n`. Hence if you have a function like:
+
+`time = 5*n^2 + 3*n + 20`
+
+- When value of `n` is very large `b*n + c` becomes irrelevant: For example:
+
+* time = 5*1000^2 + 3*1000 + 20
+* time = 5000000 + 3020
+
+- So as we can see `5*n^2` - is 5million compared to `3*n + c` which is 3020
+
  
 
