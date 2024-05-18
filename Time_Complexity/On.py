@@ -16,5 +16,4 @@ numbers  = [2, 5, 8, 9]
 res = get_squared_numbers(numbers)
 print(res)  # Output: [4, 25, 64, 81]
 
-#Another example of a time constant
-    
+# Another example of a time constant

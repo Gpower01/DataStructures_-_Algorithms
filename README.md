@@ -82,7 +82,8 @@ stock_price = {
 ## Big O notation:
 * Big O notation is used to measure how running time or space requirements for your program grows as input size grows.
 
-## Runtime Analysis
+## O(n) Time Complexity 
+- **Runtime Analysis:** 
 * for example, let's assume below array function:
 ```
 def foo(arr):
@@ -101,5 +102,20 @@ time = a*n + b
 * time = O(n) : drop constants 
 
 >> Now we say that the Big O notation time complexity for this program is order of n --> O(n)
+
+## O(1) Time Complexity :
+* time = a
+
+1) Keep faster growing term 
+2) Drop constants 
+
+`time = O(1)`
+
+# O(n^2) Time Complexity 
+- A classic exmple is where we trying to find a duplicate number in a list 
+
+* time = a * n^2 + b
+
+`time = O(n^2)`
  
 
