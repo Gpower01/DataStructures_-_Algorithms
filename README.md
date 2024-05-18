@@ -138,5 +138,34 @@ time = a*n + b
 
 - So as we can see `5*n^2` - is 5million compared to `3*n + c` which is 3020
 
- 
+## Space (Growth) Complexity 
+- Let's look at one example of `Binary Search`
 
+#### Problem Example
+* when we have a sorted list of numbers:
+- | 4 | 9 | 15 | 21 | 34 | 57 | 68 | 91 | --> Search for 68
+
+* Simple method is that we go through all the numbers and compare it to 68: This has the O(n) complexity and not an efficient operation - if you imagine we had a billion number to iterate through
+```
+for i in range(len(numbers)):
+if numbers[i] == 68
+print(i)
+```
+### Binary Search
+* We find the middle number and compare it against 68 and if it is less than 68, we discard the left side array. And repeat the operation until we find the number 68.
+
+* Big O notation is generally used to measure performance in worse case scenario
+
+* In Big O - Iteration k = n/2^k
+
+```
+1 = n/2^k
+
+n = 2^k
+
+log2 n = log2 2^k
+ 
+log2 n = k * log2 2
+
+k = log n -> O(log n)
+```
