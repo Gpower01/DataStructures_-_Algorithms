@@ -1,4 +1,4 @@
-# DataStructures_-_Algorithms
+# Data Structures Algorithms
 * Data Structure and Algorithms - Time &amp; Space Complexity Analysis 
 
 * Programming is Art as well as Science 
