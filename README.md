@@ -79,10 +79,12 @@ stock_price = {
 | Hash Table      | dictionary    | HashMap / LinkedHashMap  | std::map |
 | Linked List     | Not available | LinkedList               | std::list  |
 
-## Big O notation:
+# Big O notation:
 * Big O notation is used to measure how running time or space requirements for your program grows as input size grows.
 
-## O(n) Time Complexity 
+## Time (Runtime) Complexity 
+
+### O(n) Time Complexity 
 - **Runtime Analysis:** 
 * for example, let's assume below array function:
 ```
@@ -103,7 +105,7 @@ time = a*n + b
 
 >> Now we say that the Big O notation time complexity for this program is order of n --> O(n)
 
-## O(1) Time Complexity :
+### O(1) Time Complexity :
 * time = a
 
 1) Keep faster growing term 
@@ -111,7 +113,7 @@ time = a*n + b
 
 `time = O(1)`
 
-## O(n^2) Time Complexity 
+### O(n^2) Time Complexity 
 - A classic exmple is where we trying to find a duplicate number in a list 
 
 * time = a * n^2 + b
