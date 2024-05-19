@@ -169,3 +169,9 @@ log2 n = k * log2 2
 
 k = log n -> O(log n)
 ```
+
+## Arrays 
+| Arrays       | Python   | Java         | C++         |
+| ---          | ---      | ---          | ---         | 
+| Static Array |          | Native array | Native array|
+| Dynamic Array| List     | ArrayList    | std::vector |
