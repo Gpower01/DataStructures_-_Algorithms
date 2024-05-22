@@ -89,14 +89,82 @@ Now Let's try and implement Linked List in PYTHON
 
 class Node:
     def __init__(self, data=None, next=None) -> None:
+        """ 
+        Data contain integer numbers, text strings or complex numbers
+        : The node class represents the individual element in the Linked list 
+        : It has two variables which are `data` element in the list and `next` which is the pointer to the next element in the list 
+        """
         self.data = data
         self.next = next
 
 class LinkedList:
     def __init__(self) -> None:
+        """This is the Linked List class which contains the `head` variable that points to the next `head` in the list"""
         self.head = None
 
+    def insert_at_begining(self, data):
+        """ Takes the data and the head with the pointer to the next """
+        node  = Node(data, self.head)
+        self.head =  node 
+    
+    def print(self):
+        if self.head is None:
+            print("Linked list is empty")
+            return 
+
+        itr = self.head
+        llstr = ''
+        while itr:
+            llstr += str(itr.data) + '-->'
+            itr = itr.next 
+        
+        print(llstr)
+
+    def insert_at_end(self, data):
+        """
+        First we need to check if the head is None, then we will insert that data and since we are inserting to the end, the `next` will be null
+
+        : However, in a case where the linked list is not blank, we want to iterate all the way to the end and insert the data 
+        : So we will iterate `itr.next` all the way to the end until `itr.next` becomes None - which means that we are at the end, at that point then we will point the node to the new node data
+        """
+        if self.head is None:
+            self.head = Node(data, None)
+            return
+
+        itr = self.head
+
+        while itr.next:
+            itr = itr.next
+
+        itr.next = Node(data, None)
+    
+    def insert_values(self, data_list):
+        """
+        This method will take a list of value as an input value and it will create a new fresh linked list 
+        : So in this method, because we are wiping out all the values and starting from scratch and we are creating a new Linked List 
+        : We can simply iterate through each of the data in the list and insert the each data at the end calling the insert_at_end method
+        """
+        self.head  =  None
+        for data in data_list:
+            self.insert_at_end(data)
+
+    def get_length(self):
+        """This method counts the number of element in our Linked List and return the total count"""
+        count = 0
+        itr = self.head
+
+        while itr:
+            count += 1
+            itr = itr.next
+
+        return count 
 
 
 if __name__ == '__main__':
-    pass
+    ll = LinkedList()
+    ll.insert_at_begining(5)
+    ll.insert_at_begining(89)
+    ll.insert_at_end(79)
+    ll.insert_values(["banana", "mango", "grapes", "orange"])
+    ll.print()
+    print("length of Linked List is:", ll.get_length())
