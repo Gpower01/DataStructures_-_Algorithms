@@ -80,4 +80,23 @@ stock_prices
 0x00500             0x00A1                0x00C5                  0x00D7                0x00C0
 |null|298|0x00A1|<->|0x00500|305|0x00C5|<->|0x00A1|320|0x00D7|<->|0x00C5|301|0x00C0|<->|0x00D7|292|null|
 
+Now Let's try and implement Linked List in PYTHON 
+: Two classes - 
+: Node class, which represents individual element in the linked list (it accepts data and next(pointer) attributes)
+" LinkedList class, which contains the head variable that point to the head of the next list 
+
 """
+
+class Node:
+    def __init__(self, data=None, next=None) -> None:
+        self.data = data
+        self.next = next
+
+class LinkedList:
+    def __init__(self) -> None:
+        self.head = None
+
+
+
+if __name__ == '__main__':
+    pass
