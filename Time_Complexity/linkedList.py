@@ -73,7 +73,7 @@ Big O notation:
                     Accessing Element By Value = O(n)
 
 DOUBLE LINKED LIST 
-: Here you not only have reference to your next element - but you also have reference to your previous element as well
+: Here you not only have reference to your next element - but you also have reference to the previous element
 
 stock_prices
     |
