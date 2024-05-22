@@ -175,3 +175,11 @@ k = log n -> O(log n)
 | ---          | ---      | ---          | ---         | 
 | Static Array |          | Native array | Native array|
 | Dynamic Array| List     | ArrayList    | std::vector |
+
+## Big O Notation | Array vs Linked List 
+|                                   | Array                   | Linked List |
+| ---                               | ---                     | ---         |
+| Indexing                          | O(1)                    | O(n)        |
+| Insert/Delete Element at the start| O(n)                    | O(1)        |      
+| Insert/Delete Element at the End  | O(1) - amortized        | O(n)        |
+| Insert Element in the Middle      | O(n)                    | O(n)        |

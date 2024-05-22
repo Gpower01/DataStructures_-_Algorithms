@@ -20,7 +20,7 @@ else:
 months.append(1980)
 print(f"Monthly spend list after adding June: {months}")
 
-# 5. In April, an item was returned and a refund was issued for an amount of $20. Adjust April monthly spend
+# 5. In April, an item was returned and a refund was issued for an amount of $200. Adjust April monthly spend
 # April is the fourth month, index 3
-months[3] += 20
+months[3] += 200
 print(f"Monthly spend list after refund in April: {months}")
