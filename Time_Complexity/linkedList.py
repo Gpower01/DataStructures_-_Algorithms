@@ -159,12 +159,68 @@ class LinkedList:
 
         return count 
 
+    def remove_at(self, index):
+        """
+        We will implement a method that will allow us to remove an element from any particular index
+        : for example to remove an element at index 2
+        : remove_at(2)
+        : So first we will need to validat the list to make sure that the index exists `if index <0 or index >= self.get_length()`
+
+        : What if we wanted to remove the index at the begining of the list - which is the head, so where `index==0`
+
+        """
+        if index < 0 or index >= self.get_length():
+            raise Exception("Invalid index")
+        
+        if index ==0:
+            self.head = self.head.next
+            return 
+        
+        count = 0
+        itr = self.head
+        while itr:
+            if count == index - 1:
+                itr.next = itr.next.next 
+                break
+
+            itr = itr.next
+            count += 1
+    
+    def insert_at(self, index, data):
+        """
+        This is allows us to insert elements at sepcified index
+        """
+        if index < 0 or index >= self.get_length():
+            raise Exception("Invalid index")
+        
+        if index == 0:
+            self.insert_at_begining(data)
+            return 
+        
+        count = 0
+        itr = self.head
+        while itr:
+            if count == index -1:
+                node = Node(data, itr.next)
+                itr.next = node
+                break
+
+            itr = itr.next
+            count += 1
+        
+
 
 if __name__ == '__main__':
     ll = LinkedList()
     ll.insert_at_begining(5)
     ll.insert_at_begining(89)
     ll.insert_at_end(79)
-    ll.insert_values(["banana", "mango", "grapes", "orange"])
-    ll.print()
+    #ll.insert_values(["banana", "mango", "grapes", "orange"])
+    ll.insert_values([2, 4, 6, 8, 10, 12])
     print("length of Linked List is:", ll.get_length())
+    ll.print()
+    ll.remove_at(2)
+    ll.print()
+    ll.insert_at(0, 'figs')
+    ll.insert_at(2, 'jackfruit')
+    ll.print()
