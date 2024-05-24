@@ -108,6 +108,7 @@ class LinkedList:
         self.head =  node 
     
     def print(self):
+        """Utility function to print the linked list"""
         if self.head is None:
             print("Linked list is empty")
             return 
@@ -207,20 +208,88 @@ class LinkedList:
 
             itr = itr.next
             count += 1
+
+    def insert_after_value(self, data_after, data_to_insert):
+        """
+        : Search for first occurence of data_after value in Linked List
+        : Now insert data_to_insert after data_after node
+        """
+        current = self.head # start from the head node 
+
+        #Traverse the linked list to finde the node with the data_after
+        while current is not None:
+            if current.data == data_after:
+                #create a new node with data_to_inser and insert after the current (data_after) node (itr.next)
+                new_node = Node(data_to_insert, current.next)
+                current.next = new_node
+                return #insertion don, exit the method
+            
+            current = current.next
         
+        #If data_after is not found 
+        print(f"value{data_after} not found in the list")
+
+    def append(self, data):
+        """Append a new node at the end of the linked list"""
+        if not self.head:
+            self.head = Node(data)
+            return 
+        
+        current = self.head
+
+        while current.next:
+            current = current.next
+        
+        #node = Node(data, current.next)
+        #current.next = Node
+        current.next = Node(data)
+    
+    def remove_by_value(self, data):
+        """Remove first node that contains data"""
+        current = self.head #Start from the head node 
+
+        #If the list is empty
+        if not current:
+            print("List is empty!")
+            return
+        
+        #If the head node itself needs to be removed
+        if current.data == data:
+            self.head = current.next
+            current = None #Free the old head
+            return 
+        
+        #Traverse the list to find the data 
+        prev = None
+        while current and current.data != data:
+            prev = current
+            current = current.next
+
+        #if data not found in the list 
+        if not current:
+            print(f'value {data} not found in the list')
+            return
+        
+        #Unlink the node to be removed from the linked list
+        prev.next = current.next
+        current = None # Free the node to be removed
 
 
 if __name__ == '__main__':
     ll = LinkedList()
-    ll.insert_at_begining(5)
-    ll.insert_at_begining(89)
-    ll.insert_at_end(79)
-    #ll.insert_values(["banana", "mango", "grapes", "orange"])
-    ll.insert_values([2, 4, 6, 8, 10, 12])
+    #ll.insert_at_begining(5)
+    #ll.insert_at_begining(89)
+    #ll.insert_at_end(79)
+    ll.insert_values(["banana", "mango", "grapes", "orange"])
+    #ll.insert_values([2, 4, 6, 8, 10, 12])
     print("length of Linked List is:", ll.get_length())
+    ll.insert_after_value('mango', 'apple')
+    ll.append('pear')
+    ll.remove_by_value('orange')
     ll.print()
-    ll.remove_at(2)
-    ll.print()
-    ll.insert_at(0, 'figs')
-    ll.insert_at(2, 'jackfruit')
-    ll.print()
+    #ll.remove_at(2)
+    #ll.print()
+    #ll.insert_at(0, 'figs')
+    #ll.insert_at(2, 'jackfruit')
+    #ll.print()
+    
