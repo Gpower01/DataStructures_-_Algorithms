@@ -183,3 +183,16 @@ k = log n -> O(log n)
 | Insert/Delete Element at the start| O(n)                    | O(1)        |      
 | Insert/Delete Element at the End  | O(1) - amortized        | O(n)        |
 | Insert Element in the Middle      | O(n)                    | O(n)        |
+
+
+### Arrays vs Hashmap
+- Imagine we have the following stock prices 
+
+| Dates  | Stock Prices |
+| ---    | ---          |
+| 6-Mar  | 310          |
+| 7-Mar  | 340          |
+| 8-Mar  | 380          |
+| 9-Mar  | 302          |
+| 10-Mar | 297          |
+| 11-Mar | 323          |
