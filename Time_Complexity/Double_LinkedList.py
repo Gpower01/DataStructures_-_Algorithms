@@ -56,11 +56,31 @@ class DoublyLinkedList:
         current = self.head
         while current.next:
             current = current.next
-        
-        return current
 
-        
+        #print(f'last node data is: {current.data}')
+        #return current # return last node reference 
+        return current.data
     
+    def get_first_node(self):
+        """Retrieve first node"""
+        if not self.head:
+            print("Doubly Linked List is empty!")
+        
+        Current = self.head
+        print('First node data in the linked list is:', Current.data)
+        
+    def get_length(self):
+        """Get Linked List Length"""
+        count = 0
+        current = self.head
+
+        while current:
+            count += 1
+            current = current.next
+        
+        return count
+    
+   
 
 if __name__ == '__main__':
     dll = DoublyLinkedList()
@@ -69,9 +89,13 @@ if __name__ == '__main__':
     dll.append('Carrote')
     dll.append('pear')
     dll.get_last_node()
+    print("length of Linked List is:", dll.get_length())
+    print('Last node is:', dll.get_last_node())
+    dll.get_first_node()
     print("List printed forward:")
     #print("List printed backward:")
     #dll.print_backward()
     dll.print_forward()
+    
     
    
