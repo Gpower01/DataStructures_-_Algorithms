@@ -198,9 +198,9 @@ k = log n -> O(log n)
 | 11-Mar | 323          |
 
 - Below are different class for implementing Hash Table in different Programming 
-|       |  Class      | Code Sample                              |
-| ---   | ---         | ---                                      |
-| Python| dictionary  | prices = {'march 6': 310, 'march 7': 430}
+|       |  Class      | Code Sample                               |
+| ---   | ---         | ---                                       |
+| Python| dictionary  | prices = {'march 6': 310, 'march 7': 430} |
 | JAVA  | HashMap     | HashMap<String, Integer> prices = new HashMap<String, Integer>(); prices.put('march 6', 310); prices.put('march 7', 430);  |
 | JAVA  | LinkedHasMap| LinkedHashMap<String, Integer> prices = new LinkedHashMap<String, Integer>(); prices.put('march 6', 310); prices.put('march 7', 430); |
 | C++   | std:map     | std:map<string,int> prices; prices['march 6'] = 310; prices['march 7'] = 430 | 
