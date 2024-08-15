@@ -1,0 +1,8 @@
+matplotlib
+pandas
+numpy
+seaborn
+sqlalchemy==1.3.9
+ibm_db_sa
+ipython-sql
+dbt-core
